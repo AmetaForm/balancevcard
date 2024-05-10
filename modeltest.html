@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
+  <meta aframe-injected="" name="theme-color" content="black">
+  <title>AR Визитка Баланс Информ</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  <script src="/scripts/open_link.js"></script>
+  <script src="/scripts/play-pause.js"></script>
+  <script src="/scripts/target_trigger.js"></script>
+  <script src="/scripts/rotate-on-click.js"></script>
+  <!-- <script src="/scripts/levitation.js"></script> -->
+  <style type="text/css">
+    .a-loader-title {
+      animation: loaderTitle 1s infinite alternate;
+      color: rgba(0, 0, 0, 0);
+      background: none;
+      background-image: url('/images/loadingLogo.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-top: 0;
+      background-size: contain;
+    }
+  </style>
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+  <a-scene>
+    <a-assets>
+      <a-asset-item id="logo" src="gltf/metal_logo.glb"></a-asset-item>
+      <a-asset-item id="balance" src="gltf/balance.glb"></a-asset-item>
+      <a-asset-item id="contacts" src="gltf/contacts.glb"></a-asset-item>
+      <a-asset-item id="directions" src="gltf/directions.glb"></a-asset-item>
+      <a-asset-item id="projects" src="gltf/projects.glb"></a-asset-item>
+    </a-assets>
+    <a-light type="point" color="#d82a75" intensity="2" position="2 4 0"></a-light>
+    <a-light type="ambient" color="#FFF"></a-light>
+    <a-gltf-model class="clickable" rotation="0 45 0 " position="0 0 0" scale="0.5 0.5 0.5" src="#logo" rotate_on_click ></a-gltf-model>
+    <a-gltf-model class="clickable" rotation="90 0 0 " position="0 -0.4 0" scale="0.4 0.4 0.4" src="#balance"></a-gltf-model>
+    <a-gltf-model class="clickable" rotation="90 0 0 " position="-0.3 0 0" scale="0.4 0.4 0.4" src="#contacts"></a-gltf-model>
+    <a-gltf-model class="clickable" rotation="90 0 0 " position="0 0 0" scale="0.4 0.4 0.4" src="#directions"></a-gltf-model>
+    <a-gltf-model class="clickable" rotation="90 0 0 " position="0 0 0" scale="0.4 0.4 0.4" src="#projects"></a-gltf-model>
+    <a-entity id="camera" camera wasd-controls look-controls cursor="fuse: false; rayOrigin: mouse;"
+      raycaster="far: 10000 objects: .clickable"></a-entity>
+  </a-scene>
+</body>
+
+</html>
