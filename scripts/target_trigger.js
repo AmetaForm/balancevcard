@@ -5,15 +5,25 @@ document.addEventListener("DOMContentLoaded", function() {
     sceneEl.addEventListener('loaded', function () {
       arSystem = sceneEl.systems["mindar-image-system"];
     });
-    const exampleTarget = document.querySelector('#b_side');
+    var target_1 = document.querySelector('#b_side_1');
+    var target_2 = document.querySelector('#b_side_2');
     
     
-    exampleTarget.addEventListener("targetFound", event => {
+    target_1.addEventListener("targetFound", event => {
       console.log("target found");
       myVideo.muted = false;
     });
   
-    exampleTarget.addEventListener("targetLost", event => {
+    target_1.addEventListener("targetLost", event => {
+      console.log("target lost");
+      myVideo.muted = true;
+    });
+    target_2.addEventListener("targetFound", event => {
+      console.log("target found");
+      myVideo.muted = false;
+    });
+  
+    target_2.addEventListener("targetLost", event => {
       console.log("target lost");
       myVideo.muted = true;
     });
