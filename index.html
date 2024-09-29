@@ -44,21 +44,34 @@
       <a-asset-item id="projects" src="gltf/v2/projects.glb"></a-asset-item>
       <a-asset-item id="cubelogo" src="gltf/cubemeta_.glb"></a-asset-item>
       <img id="play_icon" src="images/play_icon.png"></img>
+      <img id="cover" src="images/cover.png"></img>
       <img id="preview" src="images/preview.png"></img>
       <video id="vid" src="videos/cubemeta.mp4" loop="true" preload="auto" playsinline></video>
     </a-assets>
     
-    <a-entity id="bion_side" mindar-image-target="targetIndex: 0">
+    <a-entity id="bion_side_v1" mindar-image-target="targetIndex: 0">
       <a-light type="ambient" color="#FFF"></a-light>
       <a-light type="point" color="#7878a8" intensity="2" position="2 4 0"></a-light>
       <a-gltf-model class="clickable" rotation="0 0 0 " position="0.23 0.1 0" scale="0.17 0.17 0.17" src="#logo" rotate_on_click ></a-gltf-model>
+      <!-- <a-image id="prev_2" src="#cover" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0" ></a-image> -->
       <a-gltf-model class="clickable" rotation="90 0 0 " position="-0.28 0.2 0" scale="0.07 0.07 0.07" src="#site" open-link="link: https://bal-inf.ru/"></a-gltf-model>
       <a-gltf-model class="clickable" rotation="90 0 0 " position="-0.35 0 0" scale="0.07 0.07 0.07" src="#directions" open-link="link: https://bal-inf.ru/directions"></a-gltf-model>
       <a-gltf-model class="clickable" rotation="90 0 0 " position="-0.2 -0.2 0" scale="0.07 0.07 0.07" src="#projects" open-link="link: https://bal-inf.ru/projects"></a-gltf-model>
       <a-gltf-model class="clickable" rotation="90 0 0 " position="0.23 -0.35 0" scale="0.07 0.07 0.07" src="#contacts" open-link="link: https://bal-inf.ru/contact-us"></a-gltf-model>
     </a-entity>
 
-    <a-entity id="b_side_1" mindar-image-target="targetIndex: 1" >
+    <a-entity id="bion_side_v2" mindar-image-target="targetIndex: 3"></a-entity>
+      <a-light type="ambient" color="#FFF"></a-light>
+      <a-light type="point" color="#7878a8" intensity="2" position="2 4 0"></a-light>
+      <a-gltf-model class="clickable" rotation="0 0 0 " position="0.23 0.1 0" scale="0.17 0.17 0.17" src="#logo" rotate_on_click ></a-gltf-model>
+      <!-- <a-image id="prev_2" src="#cover" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0" ></a-image> -->
+      <a-gltf-model class="clickable" rotation="90 0 0 " position="-0.28 0.2 0" scale="0.07 0.07 0.07" src="#site" open-link="link: https://bal-inf.ru/"></a-gltf-model>
+      <a-gltf-model class="clickable" rotation="90 0 0 " position="-0.35 0 0" scale="0.07 0.07 0.07" src="#directions" open-link="link: https://bal-inf.ru/directions"></a-gltf-model>
+      <a-gltf-model class="clickable" rotation="90 0 0 " position="-0.2 -0.2 0" scale="0.07 0.07 0.07" src="#projects" open-link="link: https://bal-inf.ru/projects"></a-gltf-model>
+      <a-gltf-model class="clickable" rotation="90 0 0 " position="0.23 -0.35 0" scale="0.07 0.07 0.07" src="#contacts" open-link="link: https://bal-inf.ru/contact-us"></a-gltf-model>
+    </a-entity>
+
+    <a-entity id="b_side_v1" mindar-image-target="targetIndex: 1" >
       <a-light type="ambient" color="#FFF"></a-light>
       <a-video id="vid" class="clickable" play-pause src="#vid" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0.01" rotation="0 0 0"></a-video>
       <a-image class="clickable" play-pause id="prev_1" src="#preview" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0.011" ></a-image>
@@ -66,7 +79,39 @@
       <a-gltf-model class="clickable" rotation="0 0 0 " position="0 -0.45 0" scale="0.25 0.25 0.25" src="#cubelogo" open-link="link: https://c.bal-inf.ru/"></a-gltf-model>
     </a-entity>
 
-    <a-entity id="b_side_2" mindar-image-target="targetIndex: 2">
+    <a-entity id="b_side_v1" mindar-image-target="targetIndex: 2">
+      <a-light type="ambient" color="#FFF"></a-light>
+      <a-video id="vid" class="clickable" play-pause src="#vid" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0.01" rotation="0 0 0"></a-video>
+      <a-image class="clickable" play-pause id="prev_2" src="#preview" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0.011" ></a-image>
+      <a-image class="clickable" play-pause id="play_2" src="#play_icon" scale="0.2 0.2 0.2" position="0 0 0.012" ></a-image>
+      <a-gltf-model class="clickable" rotation="0 0 0 " position="0 -0.45 0" scale="0.25 0.25 0.25" src="#cubelogo" open-link="link: https://c.bal-inf.ru/"></a-gltf-model>
+    </a-entity>
+
+    <a-entity id="b_side_v2" mindar-image-target="targetIndex: 4">
+      <a-light type="ambient" color="#FFF"></a-light>
+      <a-video id="vid" class="clickable" play-pause src="#vid" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0.01" rotation="0 0 0"></a-video>
+      <a-image class="clickable" play-pause id="prev_2" src="#preview" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0.011" ></a-image>
+      <a-image class="clickable" play-pause id="play_2" src="#play_icon" scale="0.2 0.2 0.2" position="0 0 0.012" ></a-image>
+      <a-gltf-model class="clickable" rotation="0 0 0 " position="0 -0.45 0" scale="0.25 0.25 0.25" src="#cubelogo" open-link="link: https://c.bal-inf.ru/"></a-gltf-model>
+    </a-entity>
+
+    <a-entity id="b_side_v2" mindar-image-target="targetIndex: 5">
+      <a-light type="ambient" color="#FFF"></a-light>
+      <a-video id="vid" class="clickable" play-pause src="#vid" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0.01" rotation="0 0 0"></a-video>
+      <a-image class="clickable" play-pause id="prev_2" src="#preview" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0.011" ></a-image>
+      <a-image class="clickable" play-pause id="play_2" src="#play_icon" scale="0.2 0.2 0.2" position="0 0 0.012" ></a-image>
+      <a-gltf-model class="clickable" rotation="0 0 0 " position="0 -0.45 0" scale="0.25 0.25 0.25" src="#cubelogo" open-link="link: https://c.bal-inf.ru/"></a-gltf-model>
+    </a-entity>
+    
+    <a-entity id="b_side_v2" mindar-image-target="targetIndex: 6">
+      <a-light type="ambient" color="#FFF"></a-light>
+      <a-video id="vid" class="clickable" play-pause src="#vid" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0.01" rotation="0 0 0"></a-video>
+      <a-image class="clickable" play-pause id="prev_2" src="#preview" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0.011" ></a-image>
+      <a-image class="clickable" play-pause id="play_2" src="#play_icon" scale="0.2 0.2 0.2" position="0 0 0.012" ></a-image>
+      <a-gltf-model class="clickable" rotation="0 0 0 " position="0 -0.45 0" scale="0.25 0.25 0.25" src="#cubelogo" open-link="link: https://c.bal-inf.ru/"></a-gltf-model>
+    </a-entity>
+
+    <a-entity id="b_side_v2" mindar-image-target="targetIndex: 7">
       <a-light type="ambient" color="#FFF"></a-light>
       <a-video id="vid" class="clickable" play-pause src="#vid" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0.01" rotation="0 0 0"></a-video>
       <a-image class="clickable" play-pause id="prev_2" src="#preview" width="16" height="9" scale="0.062 0.062 0.062" position="0 0 0.011" ></a-image>
